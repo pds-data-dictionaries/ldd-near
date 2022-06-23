@@ -1,0 +1,53 @@
+
+PDS Validate Tool Report
+
+Configuration:
+   Version                       2.2.3
+   Date                          2022-06-23T16:43:17Z
+
+Parameters:
+   Targets                       [file:/home/runner/work/ldd-near/ldd-near/build/development/e666c07314bb4fefc206cfe6ad3331f73a652314/1.18.0.0/PDS4_EXAMPLE_1I00_1000.xml, file:/home/runner/work/ldd-near/ldd-near/test/test1_VALID.xml]
+   Rule Type                     pds4.label
+   User Specified Schemas        [file:/home/runner/work/ldd-near/ldd-near/build/development/e666c07314bb4fefc206cfe6ad3331f73a652314/1.18.0.0/PDS4_EXAMPLE_1I00_1000.xsd, file:/tmp/PDS4_PDS_1I00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-near/ldd-near/build/development/e666c07314bb4fefc206cfe6ad3331f73a652314/1.18.0.0/PDS4_EXAMPLE_1I00_1000.sch, file:/tmp/PDS4_PDS_1I00.sch]
+   Severity Level                WARNING
+   Recurse Directories           true
+   File Filters Used             [*.xml, *.XML]
+   Data Content Validation       off
+   Product Level Validation      on
+   Max Errors                    100000
+   Registered Contexts File      /tmp/validate-2.2.3/resources/registered_context_products.json
+
+
+
+Product Level Validation Results
+
+  FAIL: file:/home/runner/work/ldd-near/ldd-near/build/development/e666c07314bb4fefc206cfe6ad3331f73a652314/1.18.0.0/PDS4_EXAMPLE_1I00_1000.xsd
+      WARNING  [warning.label.schema]   line 21, 137: schema_reference.4: Failed to read schema document 'https://pds.nasa.gov/pds4/near/v1/PDS4_NEAR_1I00_1000.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+    Begin Schema: https://pds.nasa.gov/pds4/near/v1/PDS4_NEAR_1I00_1000.xsd
+      FATAL_ERROR  [error.label.unresolvable_resource]   https://pds.nasa.gov/pds4/near/v1/PDS4_NEAR_1I00_1000.xsd
+    End Schema: https://pds.nasa.gov/pds4/near/v1/PDS4_NEAR_1I00_1000.xsd
+        1 product validation(s) completed
+
+Summary:
+
+  1 error(s)
+  1 warning(s)
+
+  Product Validation Summary:
+    0          product(s) passed
+    1          product(s) failed
+    0          product(s) skipped
+
+  Referential Integrity Check Summary:
+    0          check(s) passed
+    0          check(s) failed
+    0          check(s) skipped
+
+  Message Types:
+    1            error.label.unresolvable_resource
+    1            warning.label.schema
+
+End of Report
+Completed execution in 4944 ms
+
