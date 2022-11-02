@@ -46,6 +46,38 @@
     </DD_Attribute>
 
     <DD_Attribute>
+        <name>spacecraft_clock_start_count</name>
+        <version_id>1.0</version_id>
+        <local_identifier>spacecraft.clock.start.count</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Kristina Lopez</submitter_name>
+        <definition>MET of image acquisition in seconds. MET corresponds to the last spacecraft   
+            1-Hz pulse before the end of image integration, i.e., 918 ms before the end   
+            of image integration. See Murchie et al. (1998) [MURCHIEETAL1998] for a       
+            detailed explanation of timing of the 1 Hz pulse relative to image exposure.  </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>spacecraft_clock_stop_count</name>
+        <version_id>1.0</version_id>
+        <local_identifier>spacecraft.clock.stop.count</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Kristina Lopez</submitter_name>
+        <definition>MET of image acquisition in seconds. MET corresponds to the last spacecraft   
+            1-Hz pulse before the end of image integration, i.e., 918 ms before the end   
+            of image integration. See Murchie et al. (1998) [MURCHIEETAL1998] for a       
+            detailed explanation of timing of the 1 Hz pulse relative to image exposure.  </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
         <name>inst_cmprs_quantz_tbl_id</name>
         <version_id>1.0</version_id>
         <local_identifier>near.inst_cmprs_quantz_tbl_id</local_identifier>
@@ -61,9 +93,9 @@
 
     <!-- on per entry in the class list -->
     <DD_Class>
-        <name>Near</name>
+        <name>near</name>
         <version_id>1.0</version_id>
-        <local_identifier>Near</local_identifier>
+        <local_identifier>near</local_identifier>
         <submitter_name>Kristina Lopez</submitter_name>
         <definition>NEAR mission related properties</definition>
         <element_flag>true</element_flag>
@@ -105,6 +137,20 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         
+        <DD_Association> <!-- one dd_association per relationship -->
+            <identifier_reference>spacecraft.clock.start.count</identifier_reference>
+            <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+
+        <DD_Association> <!-- one dd_association per relationship -->
+            <identifier_reference>spacecraft.clock.stop.count</identifier_reference>
+            <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+
     </DD_Class>
     
     
