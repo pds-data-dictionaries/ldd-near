@@ -93,9 +93,9 @@
 
     <!-- on per entry in the class list -->
     <DD_Class>
-        <name>near</name>
+        <name>NEAR</name>
         <version_id>1.0</version_id>
-        <local_identifier>near</local_identifier>
+        <local_identifier>NEAR</local_identifier>
         <submitter_name>Kristina Lopez</submitter_name>
         <definition>NEAR mission related properties</definition>
         <element_flag>true</element_flag>
