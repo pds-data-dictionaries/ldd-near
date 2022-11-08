@@ -4,14 +4,14 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2022-07-07T10:11:51" ,
+      "Date": "2022-11-08T11:30:42" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "near:"] ,
       "classDictionary": [
         {
           "class": {
-            "identifier": "0001_NASA_PDS_1.near.Near" ,
-            "title": "Near" ,
+            "identifier": "0001_NASA_PDS_1.near.NEAR" ,
+            "title": "NEAR" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "near" ,
             "steward": "sbn" ,
@@ -21,7 +21,7 @@
             "description": "NEAR mission related properties"
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.near.Near.near.Observation_Information" ,
+                "identifier": "0001_NASA_PDS_1.near.NEAR.near.Observation_Information" ,
                 "title": "Observation_Information" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
@@ -99,6 +99,38 @@
                  ]
               }
             }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.near.Observation_Information.near.spacecraft_clock_start_count" ,
+                "title": "spacecraft_clock_start_count" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.near.Observation_Information.near.spacecraft_clock_start_count"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.near.Observation_Information.near.spacecraft_clock_stop_count" ,
+                "title": "spacecraft_clock_stop_count" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.near.Observation_Information.near.spacecraft_clock_stop_count"
+                 ]
+              }
+            }
            ]
           }
         }
@@ -163,6 +195,56 @@
             "steward": "sbn" ,
             "versionId": "1.18" ,
             "description": "The sequence_title element provides the title assigned to a particular observation sequence during planning or data processing." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.near.Observation_Information.near.spacecraft_clock_start_count" ,
+            "title": "spacecraft_clock_start_count" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "near" ,
+            "steward": "sbn" ,
+            "versionId": "1.18" ,
+            "description": "MET of image acquisition in seconds. MET corresponds to the last spacecraft 1-Hz pulse before the end of image integration, i.e., 918 ms before the end of image integration. See Murchie et al. (1998) [MURCHIEETAL1998] for a detailed explanation of timing of the 1 Hz pulse relative to image exposure. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.near.Observation_Information.near.spacecraft_clock_stop_count" ,
+            "title": "spacecraft_clock_stop_count" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "near" ,
+            "steward": "sbn" ,
+            "versionId": "1.18" ,
+            "description": "MET of image acquisition in seconds. MET corresponds to the last spacecraft 1-Hz pulse before the end of image integration, i.e., 918 ms before the end of image integration. See Murchie et al. (1998) [MURCHIEETAL1998] for a detailed explanation of timing of the 1 Hz pulse relative to image exposure. " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
