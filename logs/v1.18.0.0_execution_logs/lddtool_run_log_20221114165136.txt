@@ -3,17 +3,17 @@
 >>  INFO IM Version Id: 1.18.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.24
->>  INFO Date: Mon Nov 14 16:47:12 UTC 2022
+>>  INFO Date: Mon Nov 14 16:51:36 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-14.1.2
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.2/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.1.2/lib
 
->>> ERROR Class:0001_NASA_PDS_1.near.Observation_Information  Association:device_temperature  Attribute: device_temperature - Missing Attribute
->>> ERROR Association: device_temperature - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.near.Observation_Information  Association:near.spacecraft.clock.stop.count  Attribute: near.spacecraft.clock.stop.count - Missing Attribute
+>>> ERROR Association: near.spacecraft.clock.stop.count - Could not find referenced attribute - Reference Type: attribute_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:near
 >>> INFO Init:  - Config.Properties Namespace Id Using:near
 >>> INFO Init:  - LDD Dictionary_Type is Mission
->>> WARNING Attribute: <device_temperature> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <spacecraft_clock_stop_count> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <spacecraft_clock_start_count> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <spacecraft_clock_stop_count> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <spacecraft_clock_start_count> - The attribute name is duplicated in this local data dictionary.
