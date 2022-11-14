@@ -136,6 +136,7 @@
         </DD_Value_Domain>
     </DD_Attribute>
 
+
     <!-- on per entry in the class list -->
     <DD_Class>
         <name>NEAR</name>
@@ -183,12 +184,14 @@
         </DD_Association>
 
         <DD_Association> <!-- one dd_association per relationship -->
+
             <identifier_reference>near.spacecraft_clock_start_count</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
 
+     
         <DD_Association> <!-- one dd_association per relationship -->
             <identifier_reference>near.spacecraft_clock_stop_count</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
