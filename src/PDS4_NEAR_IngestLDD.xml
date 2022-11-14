@@ -93,7 +93,7 @@
     <DD_Attribute>
         <name>spacecraft_clock_start_count</name>
         <version_id>1.0</version_id>
-        <local_identifier>spacecraft.clock.start.count</local_identifier>
+        <local_identifier>near.spacecraft_clock_start_count</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Kristina Lopez</submitter_name>
         <definition>MET of image acquisition in seconds. MET corresponds to the last spacecraft   
@@ -109,7 +109,7 @@
     <DD_Attribute>
         <name>spacecraft_clock_stop_count</name>
         <version_id>1.0</version_id>
-        <local_identifier>spacecraft.clock.stop.count</local_identifier>
+        <local_identifier>near.spacecraft_clock_stop_count</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Kristina Lopez</submitter_name>
         <definition>MET of image acquisition in seconds. MET corresponds to the last spacecraft   
@@ -122,12 +122,26 @@
         </DD_Value_Domain>
     </DD_Attribute>
 
+    <DD_Attribute>
+        <name>device_temperature</name>
+        <version_id>1.0</version_id>
+        <local_identifier>near.device_temperature</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Kristina Lopez</submitter_name>
+        <definition>The INSTRUMENT_TEMPERATURE element provides the temperature, in degrees
+            Celsius, of an instrument or some part of an instrument. </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
 
     <!-- on per entry in the class list -->
     <DD_Class>
         <name>NEAR</name>
         <version_id>1.0</version_id>
-        <local_identifier>NEAR</local_identifier>
+        <local_identifier>near</local_identifier>
         <submitter_name>Kristina Lopez</submitter_name>
         <definition>NEAR mission related properties</definition>
         <element_flag>true</element_flag>
@@ -170,28 +184,24 @@
         </DD_Association>
 
         <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>spacecraft.clock.start.count</identifier_reference>
+
+            <identifier_reference>near.spacecraft_clock_start_count</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
 
+     
         <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>spacecraft.clock.stop.count</identifier_reference>
+            <identifier_reference>near.spacecraft_clock_stop_count</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         
-        <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>spacecraft.clock.start.count</identifier_reference>
-            <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
 
         <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>spacecraft.clock.stop.count</identifier_reference>
+            <identifier_reference>near.device_temperature</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
