@@ -183,28 +183,22 @@
         </DD_Association>
 
         <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>spacecraft.clock.start.count</identifier_reference>
+            <identifier_reference>near.spacecraft.clock.start.count</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
 
         <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>spacecraft.clock.stop.count</identifier_reference>
+            <identifier_reference>near.spacecraft.clock.stop.count</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         
-        <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>spacecraft.clock.start.count</identifier_reference>
-            <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
 
         <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>device_temperature</identifier_reference>
+            <identifier_reference>near.device_temperature</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
