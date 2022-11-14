@@ -123,7 +123,7 @@
     </DD_Attribute>
 
     <DD_Attribute>
-        <name>device_temperature_range</name>
+        <name>device_temperature</name>
         <version_id>1.0</version_id>
         <local_identifier>near.device_temperature</local_identifier>
         <nillable_flag>false</nillable_flag>
