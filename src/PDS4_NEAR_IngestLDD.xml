@@ -45,37 +45,6 @@
         </DD_Value_Domain>
     </DD_Attribute>
 
-    <DD_Attribute>
-        <name>spacecraft_clock_start_count</name>
-        <version_id>1.0</version_id>
-        <local_identifier>spacecraft.clock.start.count</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>Kristina Lopez</submitter_name>
-        <definition>MET of image acquisition in seconds. MET corresponds to the last spacecraft   
-            1-Hz pulse before the end of image integration, i.e., 918 ms before the end   
-            of image integration. See Murchie et al. (1998) [MURCHIEETAL1998] for a       
-            detailed explanation of timing of the 1 Hz pulse relative to image exposure.  </definition>
-        <DD_Value_Domain>
-            <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-        </DD_Value_Domain>
-    </DD_Attribute>
-
-    <DD_Attribute>
-        <name>spacecraft_clock_stop_count</name>
-        <version_id>1.0</version_id>
-        <local_identifier>spacecraft.clock.stop.count</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>Kristina Lopez</submitter_name>
-        <definition>MET of image acquisition in seconds. MET corresponds to the last spacecraft   
-            1-Hz pulse before the end of image integration, i.e., 918 ms before the end   
-            of image integration. See Murchie et al. (1998) [MURCHIEETAL1998] for a       
-            detailed explanation of timing of the 1 Hz pulse relative to image exposure.  </definition>
-        <DD_Value_Domain>
-            <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-        </DD_Value_Domain>
-    </DD_Attribute>
 
     <DD_Attribute>
         <name>inst_cmprs_quantz_tbl_id</name>
@@ -130,6 +99,20 @@
         <submitter_name>Kristina Lopez</submitter_name>
         <definition>The INSTRUMENT_TEMPERATURE element provides the temperature, in degrees
             Celsius, of an instrument or some part of an instrument. </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>instrument_mode</name>
+        <version_id>1.0</version_id>
+        <local_identifier>near.instrument_mode</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Kristina Lopez</submitter_name>
+        <definition>The instrument_mode element provides the name of 
+            the mode the grs instrument was operating in at the time of the observation. </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -206,9 +189,14 @@
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
+    
+    <DD_Association> <!-- one dd_association per relationship -->
+        <identifier_reference>near.instrument_mode</identifier_reference>
+        <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
+        <minimum_occurrences>0</minimum_occurrences>
+        <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
 
-    </DD_Class>
-    
-    
+</DD_Class>
     
 </Ingest_LDD>
